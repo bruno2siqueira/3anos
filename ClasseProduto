@@ -1,0 +1,52 @@
+<?php
+class  Produto {
+    //propriedades
+    public $cod, $nome, $preco;
+
+    // comportamentos
+    # SETs - atribuir valor
+    public function setCod($x){
+        $this->cod = $x;
+    }
+    public function setNome($x){
+        $this->nome = $x;
+    }
+    public function setPreco($x){
+        $this->preco = $x;
+    }
+    public function setProduto($x, $y, $z){
+        $this->cod = $x;
+        $this->nome = $y;
+        $this->preco = $z;
+    }
+    # GETs - recuperar o valor
+    public function getCod(){
+        echo $this->cod;
+    }
+    public function getNome(){
+        echo $this->nome;
+    }
+    public function getPreco(){
+        echo $this->preco;
+    }
+    public function getProduto(){
+        echo "# Produto <br>
+              # Código: $this->cod<br>
+              # Nome..: $this->nome<br>
+              # Preço..: $this->preco";
+    }
+}
+// Criando um objeto da classe Produto
+$agua = new Produto();
+$agua->setCod(0001);
+$agua->setNome("água pura");
+$agua->setPreco(2.50);
+$agua->getCod();
+$agua->getNome();
+$agua->getPreco();
+
+//echo "<br> setProduto() e getProduto </br>";
+
+$refri = new Produto();
+$refri->setProduto(2,"coca-cola","R$ 5.56");
+$refri->getProduto();
